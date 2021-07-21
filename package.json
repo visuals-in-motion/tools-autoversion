@@ -1,0 +1,12 @@
+{
+  "name": "ru.visuals.autoversion",
+  "version": "1.0.0",
+  "description": "Пакет для автоматической установки версии проекта",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/visuals-in-motion/tools-autoversion.git"
+  },
+  "author": "Visuals <hello@visuals.ru> (https://github.com/visuals-in-motion)",
+  "displayName": "Visuals Autoversion",
+  "dependencies": {}
+}
