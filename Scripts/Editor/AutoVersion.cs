@@ -9,6 +9,7 @@ namespace Visuals
 		[DidReloadScripts]
 		private static void OnScriptsReloaded()
 		{
+#if COMMAND			
 			PlayerSettings.companyName = "Visuals";
 			PlayerSettings.runInBackground = true;
 			PlayerSettings.visibleInBackground = true;
@@ -20,7 +21,6 @@ namespace Visuals
 			gitRepositoryName = gitRepositoryName.Replace(Environment.NewLine, "");
 			gitRepositoryName = gitRepositoryName.Replace("\n", "");
 			PlayerSettings.productName = gitRepositoryName;
-
 			string gitCommitsCount = CommandLine.Run("git rev-list --count HEAD");
 
 			string[] versionArray = PlayerSettings.bundleVersion.Split('.');
@@ -41,6 +41,7 @@ namespace Visuals
 
 			PlayerSettings.bundleVersion = versionMajor + gitCommitsCount;
 			PlayerSettings.macOS.buildNumber = PlayerSettings.bundleVersion;
+#endif		
 		}
 	}
 }
