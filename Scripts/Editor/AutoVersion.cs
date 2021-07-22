@@ -1,11 +1,14 @@
 using System;
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.Callbacks;
+#endif
 
 namespace Visuals
 {
 	public class AutoVersion
 	{
+#if UNITY_EDITOR
 		[DidReloadScripts]
 		private static void OnScriptsReloaded()
 		{
@@ -43,5 +46,6 @@ namespace Visuals
 			PlayerSettings.macOS.buildNumber = PlayerSettings.bundleVersion;
 #endif		
 		}
+#endif
 	}
 }
