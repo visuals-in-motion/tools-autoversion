@@ -1,3 +1,16 @@
 {
-	"name": "Visuals.Autoversion.Editor"
+    "name": "Visuals.Autoversion.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:36d6f029219d8cc4393ffb4b8503cdad"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
