@@ -9,7 +9,7 @@ namespace Visuals
 	public class AutoVersion
 	{
 #if UNITY_EDITOR
-		[DidReloadScripts]
+		[InitializeOnLoadMethodAttribute]
 		private static void OnScriptsReloaded()
 		{
 #if COMMAND			
