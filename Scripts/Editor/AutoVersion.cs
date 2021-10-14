@@ -8,11 +8,11 @@ namespace Visuals
 {
 	public class AutoVersion
 	{
-#if UNITY_EDITOR
+#if UNITY_EDITOR_WIN
 		[InitializeOnLoadMethodAttribute]
 		private static void OnScriptsReloaded()
 		{
-#if COMMAND			
+#if COMMAND
 			PlayerSettings.companyName = "Visuals";
 			PlayerSettings.runInBackground = true;
 			PlayerSettings.visibleInBackground = true;
