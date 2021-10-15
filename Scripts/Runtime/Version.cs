@@ -12,7 +12,7 @@ namespace Visuals
 		{
 			GameObject canvasVersion = new GameObject("CanvasVersion");
 			Canvas canvas = canvasVersion.AddComponent<Canvas>();
-			canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+			canvas.renderMode = RenderMode.ScreenSpaceOverlay; 
 			canvas.sortingOrder = 32000;
 			CanvasScaler canvasScaler = canvasVersion.AddComponent<CanvasScaler>();
 			canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
@@ -23,7 +23,7 @@ namespace Visuals
 			textVersion.transform.SetParent(canvasVersion.transform);
 
 			Text version = textVersion.AddComponent<Text>();
-			version.text = "Версия " + Application.version;
+			version.text = "Version: " + Application.version;
 			version.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
 			version.fontStyle = FontStyle.Normal;
 			version.alignment = TextAnchor.LowerRight;
