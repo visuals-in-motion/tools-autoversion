@@ -23,7 +23,7 @@ namespace Visuals
 			textVersion.transform.SetParent(canvasVersion.transform);
 
 			Text version = textVersion.AddComponent<Text>();
-			version.text = "Version: " + Application.version;
+			version.text = "Версия: " + Application.version;
 			version.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
 			version.fontStyle = FontStyle.Normal;
 			version.alignment = TextAnchor.LowerRight;
