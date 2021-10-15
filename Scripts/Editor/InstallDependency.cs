@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace Visuals
 {
-#if UNITY_EDITOR
+#if UNITY_EDITOR_WIN
     [InitializeOnLoad]
     public class InstallDependency
     {
