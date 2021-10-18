@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -24,7 +25,7 @@ namespace Visuals
 			gitRepositoryName = gitRepositoryName.Replace(Environment.NewLine, "");
 			gitRepositoryName = gitRepositoryName.Replace("\n", "");
 			PlayerSettings.productName = gitRepositoryName;
-			string gitCommitsCount = CommandLine.Run("git rev-list --count HEAD");
+			string gitCommitsCount = CommandLine.Run("git rev-list --count HEAD").Replace("\n", "");
 
 			string[] versionArray = PlayerSettings.bundleVersion.Split('.');
 			string versionMajor = string.Empty;
