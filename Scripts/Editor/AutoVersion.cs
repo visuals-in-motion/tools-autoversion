@@ -1,5 +1,6 @@
 using System;
 using System.Text.RegularExpressions;
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 using UnityEditor.Callbacks;
@@ -45,7 +46,11 @@ namespace Visuals
 
 			PlayerSettings.bundleVersion = versionMajor + gitCommitsCount;
 			PlayerSettings.macOS.buildNumber = PlayerSettings.bundleVersion;
-#endif		
+#if UNITY_WSA
+        System.Version version = new System.Version(versionMajor + gitCommitsCount + ".0");
+        PlayerSettings.WSA.packageVersion = version;
+#endif
+#endif
 		}
 #endif
 	}
