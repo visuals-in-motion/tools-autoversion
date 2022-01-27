@@ -25,7 +25,7 @@ namespace Visuals
 			gitRepositoryName = splitGitRepositoryName[splitGitRepositoryName.Length - 1].Replace(".git", "");
 			gitRepositoryName = gitRepositoryName.Replace(Environment.NewLine, "");
 			gitRepositoryName = gitRepositoryName.Replace("\n", "");
-			PlayerSettings.productName = gitRepositoryName;
+			//PlayerSettings.productName = gitRepositoryName;
 			string gitCommitsCount = CommandLine.Run("git rev-list --count HEAD").Replace("\n", "");
 
 			string[] versionArray = PlayerSettings.bundleVersion.Split('.');
